@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color">
+
+    <RelativeLayout
+        android:id="@+id/parent_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear_mid_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/corner_color"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_social_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="10dp"
+                    android:paddingLeft="10dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/text_color"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_social_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@+id/checkAllimg"
+                    android:layout_toLeftOf="@+id/checkAllimg"
+                    android:textColor="@color/text_color"
+                    android:textSize="16dp" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkAllimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/custom_checkbox"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.cleanPhone.mobileCleaner.utility.SocialGridView
+            android:id="@+id/rv_imgadapter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_mid_layer"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:drawSelectorOnTop="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:scrollbarStyle="outsideOverlay"
+            android:verticalSpacing="10dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/hidden_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/white"
+        android:text="@string/mbc_no_record"
+        android:visibility="gone" />
+</RelativeLayout>

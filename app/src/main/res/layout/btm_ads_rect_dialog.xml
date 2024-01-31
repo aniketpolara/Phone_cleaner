@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:gravity="center_vertical" android:id="@+id/tv_close_ads_dialog" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent" android:layout_height="8dp"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ad_view_dialog" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent" android:layout_height="8dp"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ad_view_dialog_banner" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

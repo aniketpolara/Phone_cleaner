@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_44">44dp</dimen>
+    <dimen name="rippleRadius">15dp</dimen>
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="btn_45">45dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="button_height">30dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_horizontal_marginbig">8dp</dimen>
+    <dimen name="activity_horizontal_marginsmall">4dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+</resources>

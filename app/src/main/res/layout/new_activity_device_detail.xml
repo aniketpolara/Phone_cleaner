@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:backgroundTint="@color/sidebar_header_color"
+            android:elevation="0dp"
+            android:theme="@style/ToolbarColoredBackArrow"
+            android:title=""
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:padding="13dp"
+                android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_bold"
+            android:text="Device Info"
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
+    </RelativeLayout>
+        <LinearLayout
+            android:layout_below="@id/toolbar"
+            android:id="@+id/llBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llBanner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/up_rel_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/sidebar_header_color"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/card_corner"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerInParent="true"
+                                    android:padding="11dp"
+                                    android:src="@drawable/model" />
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/lato_regular"
+                                android:text="@string/mbc_model"
+                                android:textColor="@color/text_color"
+                                android:textSize="13dp" />
+
+                        <TextView
+                            android:id="@+id/model_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:maxLength="11"
+                            android:padding="5dp"
+                            android:text="MI Max"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/card_corner"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerInParent="true"
+                                    android:padding="13dp"
+                                    android:src="@drawable/up_time" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/lato_regular"
+                                android:maxLines="1"
+                                android:text="@string/mbc_battery_capicty"
+                                android:textColor="@color/text_color"
+                                android:textSize="13dp" />
+
+                        <TextView
+                            android:id="@+id/uptime_sys"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/text_color"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/card_corner"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_centerInParent="true"
+                                    android:padding="13dp"
+                                    android:src="@drawable/android" />
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/lato_regular"
+                                android:text="Android"
+                                android:textColor="@color/text_color"
+                                android:textSize="13dp" />
+
+                        <TextView
+                            android:id="@+id/version_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:padding="5dp"
+                            android:text="7.0 N"
+                            android:textColor="@color/text_color"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/down_ll_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/sidebar_header_color"
+                        android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/rounded_border_corner"
+                        app:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="10dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/half_round">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/lato_bold"
+                                            android:gravity="center"
+                                            android:text="@string/mbc_network"
+                                            android:textColor="@color/white"
+                                            android:textSize="19dp" />
+                                    </LinearLayout>
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="10dp">
+
+                                        <ImageView
+                                            android:id="@+id/iv_wifi"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:visibility="gone" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@+id/iv_wifi"
+                                        android:layout_toRightOf="@+id/iv_wifi"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_wifi"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_wifi_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/iv_bluetooth"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/bluetooth"
+                                            android:visibility="gone" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@+id/iv_bluetooth"
+                                        android:layout_toRightOf="@+id/iv_bluetooth"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_bluetooth"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_bluetooth_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:text=""
+                                        android:fontFamily="@font/lato_bold"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/iv_mobile_data"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:visibility="gone" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@+id/iv_mobile_data"
+                                        android:layout_toRightOf="@+id/iv_mobile_data"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_location"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_gps_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/rounded_border_corner"
+                        app:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/half_round">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/lato_bold"
+                                            android:gravity="center"
+                                            android:text="@string/mbc_memory"
+                                            android:textColor="@color/white"
+                                            android:textSize="19dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.7">
+
+                                            <ProgressBar
+                                                android:id="@+id/progress_ram"
+                                                style="?android:attr/progressBarStyleHorizontal"
+                                                android:layout_width="130dp"
+                                                android:layout_height="130dp"
+                                                android:layout_centerInParent="true"
+                                                android:padding="25dp"
+                                                android:progress="10"
+                                                android:progressDrawable="@drawable/progressbar_onboarding_view" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/progress_size_text"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="1.37"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="15dp" />
+
+                                                <TextView
+                                                    android:id="@+id/progress_size_unit"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="20dp"
+                                                    android:layout_gravity="top"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:gravity="top"
+                                                    android:text="GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12dp" />
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <RelativeLayout
+                                                android:id="@+id/rel_used"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentStart="true"
+                                                    android:layout_alignParentLeft="true"
+                                                    android:layout_marginStart="5dp"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="@string/mbc_memory_used"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp" />
+
+                                                <TextView
+                                                    android:id="@+id/used_ram"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_marginRight="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="2.09 GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16dp" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/rel_available"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentStart="true"
+                                                    android:layout_alignParentLeft="true"
+                                                    android:layout_marginLeft="3dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="Available"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp" />
+
+                                                <TextView
+                                                    android:id="@+id/avail_ram"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_marginRight="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="2.09 GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16dp" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/rel_tot"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentStart="true"
+                                                    android:layout_alignParentLeft="true"
+                                                    android:layout_marginLeft="3dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="Total"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp" />
+
+                                                <TextView
+                                                    android:id="@+id/tvtot_ram"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_marginRight="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="2.09 GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16dp" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/rounded_border_corner"
+                        app:cardCornerRadius="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:background="@drawable/half_round">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/lato_bold"
+                                            android:gravity="center"
+                                            android:text="@string/mbc_storage"
+                                            android:textColor="@color/white"
+                                            android:textSize="19dp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0.7">
+
+                                            <ProgressBar
+                                                android:id="@+id/progress_storage"
+                                                style="?android:attr/progressBarStyleHorizontal"
+                                                android:layout_width="130dp"
+                                                android:layout_height="130dp"
+                                                android:layout_centerInParent="true"
+                                                android:padding="25dp"
+                                                android:progress="10"
+                                                android:progressDrawable="@drawable/progressbar_onboarding_view"
+                                                android:progressTint="@color/colorPrimary" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/progress_storage_size"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="1.37"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="15dp" />
+
+                                                <TextView
+                                                    android:id="@+id/progress_storage_unit"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="20dp"
+                                                    android:layout_gravity="top"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:gravity="top"
+                                                    android:text="GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12dp" />
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <RelativeLayout
+                                                android:id="@+id/space_used"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentStart="true"
+                                                    android:layout_alignParentLeft="true"
+                                                    android:layout_marginLeft="3dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="@string/mbc_memory_used"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16dp" />
+
+                                                <TextView
+                                                    android:id="@+id/used_space"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_marginRight="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="2.09 GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16dp" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/space_available"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentStart="true"
+                                                    android:layout_alignParentLeft="true"
+                                                    android:layout_marginLeft="3dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="Available"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp" />
+
+                                                <TextView
+                                                    android:id="@+id/avail_space"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_marginRight="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="2.09 GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16dp" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/space_tot"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentStart="true"
+                                                    android:layout_alignParentLeft="true"
+                                                    android:layout_marginLeft="3dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="Total"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp" />
+
+                                                <TextView
+                                                    android:id="@+id/tot_space"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true"
+                                                    android:layout_marginRight="10dp"
+                                                    android:fontFamily="@font/lato_bold"
+                                                    android:text="2.09 GB"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16dp" />
+                                            </RelativeLayout>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/rounded_border_corner"
+                        app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/half_round">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:gravity="center"
+                                        android:text="Battery Info"
+                                        android:textColor="@color/white"
+                                        android:textSize="19dp" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="15dp"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:visibility="gone" />
+
+                                    <ProgressBar
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:progress="80"
+                                        android:progressDrawable="@drawable/progressbar_sys_info_storage" />
+                                </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="7dp"
+                                android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_battery_health"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_battery_health"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_battery_status"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_battery_status"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/seprator_color"
+                                    android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="7dp"
+                                android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_battery_voltage"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_battery_voltage"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/seprator_color"
+                                    android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="7dp"
+                                android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_battery_temp"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_battery_temp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/seprator_color"
+                                    android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginBottom="7dp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_battery_type"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/seprator_color"
+                                    android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text="@string/mbc_battery_status"
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_battery_level"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:fontFamily="@font/lato_bold"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="15dp" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/seprator_color"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ads_lays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbar"
+    android:background="@color/sidebar_header_color">
+
+
+    <RelativeLayout
+        android:id="@+id/top_layo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true">
+
+        <com.cleanPhone.mobileCleaner.customview.RevealView
+            android:id="@+id/iv_rocket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cpu_cooler_n"
+            android:visibility="gone" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/cpu_lottie" />
+
+
+        <TextView
+            android:id="@+id/text_scanning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/animation_view"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_scanning"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/mbc_cpu_cooler_scan"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+

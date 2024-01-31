@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_markall"
+        android:orderInCategory="1"
+        android:title="@string/mbc_mark_all"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_unmarkall"
+        android:orderInCategory="1"
+        android:title="@string/mbc_unmark_all"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sortByName"
+        android:orderInCategory="1"
+        android:title="@string/mbc_sort_by_name"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sortBySize"
+        android:orderInCategory="1"
+        android:title="@string/mbc_sort_by_size"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sortByDate"
+        android:orderInCategory="1"
+        android:title="@string/mbc_sort_by_date"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="1"
+        android:title="@string/mbc_action_settings"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>

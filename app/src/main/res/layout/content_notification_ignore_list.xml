@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/pbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:translationZ="2dp"
+        android:visibility="invisible">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/pbar"
+            style="@style/SpinKitView.Large.WanderingCubes"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            app:SpinKit_Color="@color/colorPrimary" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_switch"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/squre_rectangle">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/on_off_notification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/lato_bold"
+            android:paddingStart="16dp"
+            android:paddingEnd="14dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:thumb="@drawable/custom_thumb3"
+            app:track="@drawable/custom_track3" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center"
+        android:text="@string/mbc_notification_deactivate"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_switch"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/divider_shadow"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:text="@string/mbc_affected_apps"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview_ignore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sidebar_header_color" />
+    </LinearLayout>
+
+
+</RelativeLayout>

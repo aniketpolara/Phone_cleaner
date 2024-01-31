@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199011741255",
+    "project_id": "phone-cleaner-23b6d",
+    "storage_bucket": "phone-cleaner-23b6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199011741255:android:13596fb116460eedfe8b62",
+        "android_client_info": {
+          "package_name": "com.cleanPhone.mobileCleaner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199011741255-tdk67doik0pho3f06mlq2n3vp9pl34ke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJbTXxD1SPEAe1BkYUVbG9hA-1iKwlk8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199011741255-tdk67doik0pho3f06mlq2n3vp9pl34ke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

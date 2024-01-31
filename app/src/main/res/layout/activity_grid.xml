@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/sidebar_header_color"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/sidebar_header_color"
+        android:elevation="0dp"
+        android:theme="@style/ToolbarColoredBackArrow"
+        android:title=""
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:transitionName="title" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_meter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sidebar_header_color"
+        android:orientation="vertical"
+        android:paddingVertical="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_regular"
+                android:text="@string/mbc_size_filter"
+                android:textColor="@color/text_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="20MB"
+                android:textColor="@color/text_color"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="15dp"-->
+        <!--            android:paddingLeft="20dp"-->
+        <!--            android:paddingRight="20dp"-->
+        <!--            android:src="@drawable/scale" />-->
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:progressTint="@color/Colororange"
+            android:progress="10"
+            android:progressBackgroundTint="@color/white"
+            android:progressBackgroundTintMode="src_over"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:thumb="@drawable/custom_thumb" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="start"
+                android:text="@string/low"
+                android:textColor="@color/text_color"
+                android:textSize="14dp" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/default_chkBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:text="@string/mbc_defaults"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/mbc_high"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="@color/sidebar_header_color">
+
+        <TextView
+            android:id="@+id/tv_gird"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/mbc_notfound"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/txt_color"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btm_lay"
+            android:visibility="gone" />
+
+        <com.cleanPhone.mobileCleaner.utility.PinnedSectionListView
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btm_lay"
+            android:layout_marginBottom="0dp"
+            android:drawSelectorOnTop="true"
+            android:focusable="false"
+            android:gravity="center"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <LinearLayout
+            android:id="@+id/btm_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/btnfiledelete"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/junk_rectangle">
+
+                <TextView
+                    android:id="@+id/tv_file_delete_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/sidebar_header_color"
+        android:visibility="gone">
+
+        <include layout="@layout/backpress_ads_screen" />
+    </RelativeLayout>
+</LinearLayout>

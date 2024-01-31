@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="country_code">
+        <item>en</item>
+        <item>ja</item>
+        <item>da</item>
+        <item>da-rDK</item>
+        <item>it</item>
+        <item>ru</item>
+        <item>sv</item>
+        <item>es</item>
+        <item>nl</item>
+        <item>fi</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>no</item>
+        <item>nb</item>
+        <item>nn</item>
+        <item>pt-rBR</item>
+        <item>pt-rPT</item>
+        <item>th</item>
+    </array>
+    <array name="country_list">
+        <item>English</item>
+        <item>Japanese</item>
+        <item>Danish</item>
+        <item>Danish</item>
+        <item>Italian</item>
+        <item>Russian</item>
+        <item>Swedish</item>
+        <item>Spanish</item>
+        <item>Dutch</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Norwegian</item>
+        <item>Norwegian Bokmål</item>
+        <item>Norwegian Bokmål</item>
+        <item>Portuguese</item>
+        <item>Portuguese</item>
+        <item>Thai</item>
+    </array>
+    <array name="description">
+        <item>@string/mbc_img_resolution_description</item>
+        <item>@string/mbc_image_size_description</item>
+        <item>@string/mbc_create_date_description</item>
+    </array>
+    <array name="first_radio">
+        <item>@string/mbc_low_resolution</item>
+        <item>@string/mbc_image_size_smaller</item>
+        <item>@string/mbc_earlier_date</item>
+    </array>
+    <array name="junkmodules">
+        <item>@string/mbc_app_cache</item>
+        <item>@string/mbc_system_cache</item>
+        <item>@string/mbc_temp_file</item>
+        <item>@string/mbc_apk_file</item>
+        <item>@string/mbc_unused_folder</item>
+        <item>@string/mbc_free_memory</item>
+    </array>
+    <array name="junkmodulesaboven">
+        <item>@string/mbc_app_cache</item>
+        <item>@string/mbc_temp_file</item>
+        <item>@string/mbc_apk_file</item>
+        <item>@string/mbc_unused_folder</item>
+        <item>@string/mbc_free_memory</item>
+    </array>
+    <array name="junkmodulesabovenlessboost">
+        <item>@string/mbc_app_cache</item>
+        <item>@string/mbc_temp_file</item>
+        <item>@string/mbc_apk_file</item>
+        <item>@string/mbc_unused_folder</item>
+    </array>
+    <array name="junkmodulesaboveseven">
+        <item>@string/mbc_app_cache</item>
+        <item>@string/mbc_system_cache</item>
+        <item>@string/mbc_temp_file</item>
+        <item>@string/mbc_apk_file</item>
+        <item>@string/mbc_unused_folder</item>
+    </array>
+    <array name="second_radio">
+        <item>@string/mbc_high_resolution</item>
+        <item>@string/mbc_image_size_larger</item>
+        <item>@string/mbc_latest_date</item>
+    </array>
+    <array name="title">
+        <item>@string/mbc_img_resolution</item>
+        <item>@string/mbc_image_size</item>
+        <item>@string/mbc_create_date</item>
+    </array>
+</resources>

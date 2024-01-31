@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_head"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    android:background="@drawable/rounded_border_white"
+    android:backgroundTint="@color/sidebar_header_color">
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sidebar_header_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvtitle"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/mbc_path"
+            android:textColor="@color/text_color"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listjunkfiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first"
+        android:layout_marginBottom="?android:attr/actionBarSize"
+        android:divider="@color/place_autocomplete_search_hint"
+        android:dividerHeight="0.25dp"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/okbtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/junk_rectangle"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text="@string/mbc_ok"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+</RelativeLayout>

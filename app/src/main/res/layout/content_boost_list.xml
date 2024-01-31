@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/bg_default" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/boostscreen_toplayout" android:background="@color/sidebar_header_color" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:id="@+id/boost_sizetv_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp">
+                <TextView android:textSize="14dp" android:textColor="@color/txt_color" android:id="@+id/boost_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="@string/mbc_mb" android:layout_marginStart="2dp"/>
+                <TextView android:textColor="@color/colorPrimaryDark" android:id="@+id/symbol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@+id/boost_unit"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView android:textSize="17dp" android:textColor="@color/txt_color" android:id="@+id/boost_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mbc_space_optimized"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_above="@+id/lhas" android:layout_below="@+id/boostscreen_toplayout">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/la" android:background="@drawable/divider_shadow" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18dp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:id="@+id/textview_processservies" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_marginStart="8dp"/>
+            <TextView android:textSize="16dp" android:textColor="@color/text_color" android:layout_gravity="center" android:id="@+id/textview_processservies2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mbc_active_progress" android:layout_marginStart="4dp"/>
+        </LinearLayout>
+        <ListView android:id="@+id/boost_processlistview" android:background="@android:color/white" android:paddingBottom="?attr/actionBarSize" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="1dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/lhas" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textSize="18dp" android:textColor="@color/white" android:id="@+id/boost_btn" android:background="@color/colorPrimaryDark" android:padding="3dp" android:layout_width="match_parent" android:layout_height="44dp" android:layout_margin="8dp" android:text="@string/mbc_boost" android:textAllCaps="false" android:stateListAnimator="@null"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color"
+    android:orientation="vertical"
+    ads:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:ignore="NamespaceTypo">
+
+    <ScrollView
+        android:id="@+id/scrol_view_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/junk_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/noti_junk" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center_vertical"
+                        android:text="Junk Cleaner"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_junk_noti_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Remind me for junk cleaning"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <com.codersroute.flexiblewidgets.FlexibleSwitch
+                        android:id="@+id/noti_child_switch1"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:checked="false"
+                        ads:backgroundColorOnSwitchOff="@color/sidebar_header_color"
+                        ads:backgroundColorOnSwitchOn="@color/switchon"
+                        ads:strokeColorOnSwitchOff="@color/corner_color"
+                        ads:strokeColorOnSwitchOn="@color/colorPrimary"
+                        ads:thumbColorOnSwitchOff="@color/corner_color"
+                        ads:thumbColorOnSwitchOn="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/junk_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/noti_memory" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center_vertical"
+                        android:text="Free up Memory"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_ram_noti_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Notify me to free up RAM"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <com.codersroute.flexiblewidgets.FlexibleSwitch
+                        android:id="@+id/noti_child_switch2"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:checked="false"
+                        ads:backgroundColorOnSwitchOff="@color/sidebar_header_color"
+                        ads:backgroundColorOnSwitchOn="@color/switchon"
+                        ads:strokeColorOnSwitchOff="@color/corner_color"
+                        ads:strokeColorOnSwitchOn="@color/colorPrimary"
+                        ads:thumbColorOnSwitchOff="@color/corner_color"
+                        ads:thumbColorOnSwitchOn="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/junk_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/noti_duplicates" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="2.7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center_vertical"
+                        android:text="Free up Memory"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_duplicates_noti_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.7"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Remind me to clean similar photos in the gallery"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <com.codersroute.flexiblewidgets.FlexibleSwitch
+                        android:id="@+id/noti_child_switch3"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:checked="false"
+                        ads:backgroundColorOnSwitchOff="@color/sidebar_header_color"
+                        ads:backgroundColorOnSwitchOn="@color/switchon"
+                        ads:strokeColorOnSwitchOff="@color/corner_color"
+                        ads:strokeColorOnSwitchOn="@color/colorPrimary"
+                        ads:thumbColorOnSwitchOff="@color/corner_color"
+                        ads:thumbColorOnSwitchOn="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/junk_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/noti_cpu" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="2.7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center_vertical"
+                        android:text="CPU Cooler"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_cpu_cooler_noti_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.7"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Remind me to cool down Phone temperature"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <com.codersroute.flexiblewidgets.FlexibleSwitch
+                        android:id="@+id/noti_child_switch8"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:checked="false"
+                        ads:backgroundColorOnSwitchOff="@color/sidebar_header_color"
+                        ads:backgroundColorOnSwitchOn="@color/switchon"
+                        ads:strokeColorOnSwitchOff="@color/corner_color"
+                        ads:strokeColorOnSwitchOn="@color/colorPrimary"
+                        ads:thumbColorOnSwitchOff="@color/corner_color"
+                        ads:thumbColorOnSwitchOn="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/junk_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/noti_social" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="2.7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center_vertical"
+                        android:text="Social Cleaning"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_turbo_cleaner_noti_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.7"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Remind me to clean unwanted social media files"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <com.codersroute.flexiblewidgets.FlexibleSwitch
+                        android:id="@+id/noti_child_switch5"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:checked="false"
+                        ads:backgroundColorOnSwitchOff="@color/sidebar_header_color"
+                        ads:backgroundColorOnSwitchOn="@color/switchon"
+                        ads:strokeColorOnSwitchOff="@color/corner_color"
+                        ads:strokeColorOnSwitchOn="@color/colorPrimary"
+                        ads:thumbColorOnSwitchOff="@color/corner_color"
+                        ads:thumbColorOnSwitchOn="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/junk_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/noti_whatsapp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="2.7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center_vertical"
+                        android:text="Whatsapp Cleaner"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_whtsapp_noti_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.7"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Remind me to manage whatsapp \n junk files"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <com.codersroute.flexiblewidgets.FlexibleSwitch
+                        android:id="@+id/noti_child_switch10"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:checked="false"
+                        ads:backgroundColorOnSwitchOff="@color/sidebar_header_color"
+                        ads:backgroundColorOnSwitchOn="@color/switchon"
+                        ads:strokeColorOnSwitchOff="@color/corner_color"
+                        ads:strokeColorOnSwitchOn="@color/colorPrimary"
+                        ads:thumbColorOnSwitchOff="@color/corner_color"
+                        ads:thumbColorOnSwitchOn="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/junk_corner"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/noti_notification_manager" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical"
+                    android:weightSum="2.7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="center_vertical"
+                        android:text="Notification Cleaner"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/tv_noti_cleaner_noti_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1.7"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Remind me to manage Notification"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <com.codersroute.flexiblewidgets.FlexibleSwitch
+                        android:id="@+id/noti_child_switch11"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:checked="false"
+                        ads:backgroundColorOnSwitchOn="@color/switchon"
+                        ads:backgroundColorOnSwitchOff="@color/sidebar_header_color"
+                        ads:strokeColorOnSwitchOff="@color/corner_color"
+                        ads:strokeColorOnSwitchOn="@color/colorPrimary"
+                        ads:thumbColorOnSwitchOff="@color/corner_color"
+                        ads:thumbColorOnSwitchOn="@color/white" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

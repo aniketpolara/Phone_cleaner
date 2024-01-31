@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/relative_top">
+        <TextView android:gravity="center" android:id="@+id/tv_empty" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/mbc_notfound_files"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toRightOf="@+id/tv_empty" android:layout_below="@+id/tv_empty" android:animateLayoutChanges="true" android:layout_toEndOf="@+id/tv_empty">
+            <ExpandableListView android:id="@+id/social_exp_lv" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="8dp" android:groupIndicator="@null" android:dividerHeight="0.1dp" android:animateLayoutChanges="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/relative_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textSize="18dp" android:textColor="@android:color/white" android:id="@+id/btncleannow" android:background="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="45dp" android:layout_margin="8dp" android:text="@string/mbc_clean"/>
+
+    </LinearLayout>
+</RelativeLayout>

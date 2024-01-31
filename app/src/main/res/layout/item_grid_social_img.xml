@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/card_corner"
+    android:backgroundTint="@color/corner_color"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.cleanPhone.mobileCleaner.utility.SquaredImageView
+            android:id="@+id/junklistitemimage"
+            android:layout_width="175dp"
+            android:layout_height="176dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:id="@+id/frame_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#9c000000"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/junkListItemSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/lato_regular"
+                android:paddingStart="5dp"
+                android:paddingLeft="5dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+            <LinearLayout
+                android:id="@+id/checkcontainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/junklistitemcheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:button="@drawable/custom_checkbox"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/junklistitemapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text="@string/mbc_check"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/junklistitemsize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="@string/mbc_check"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/listiteminfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_marginsmall"
+            android:src="@drawable/info"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/sidebar_header_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_cirle_layout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/animated_check"
+            android:visibility="visible" />
+
+        <com.cleanPhone.mobileCleaner.utility.TimerView
+            android:id="@+id/tView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/delete_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/toplayout_color"
+            android:gravity="center"
+            android:padding="@dimen/activity_horizontal_marginsmall"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/delete_icon_junkanim"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_anim_junk"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ok_icon_junkanim"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_resultmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upper_layout_top"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="10dp"
+        android:text="@string/mbc_cool_down_complete"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/upper_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_timer"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_resultdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:text="@string/_45_u2103"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sidebar_header_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+            <ImageView
+                android:id="@+id/option_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="16dp"
+                android:src="@drawable/settings_blue"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:id="@+id/cpucollerfirst_toplayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/card_corner"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/ll_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/cpucollerfirst_temp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lato_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/white"
+                                    android:textSize="25dp" />
+
+                                <TextView
+                                    android:id="@+id/symboltext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@+id/cpucollerfirst_temp"
+                                    android:fontFamily="@font/lato_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="℃"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/symbol"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_up"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:padding="5dp"
+                            android:text="@string/mbc_normal"
+                            android:textColor="@color/text_color"
+                            android:textSize="17dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0.2"
+                    android:background="@color/grayseperator" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/ll_uppp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:id="@+id/cpucoolerfirst_usage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/lato_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/white"
+                                    android:textSize="25dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/ltext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@+id/cpucoolerfirst_usage"
+                                    android:fontFamily="@font/lato_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="%"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_uppp"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:padding="5dp"
+                            android:text="@string/mbc_cpu_usage"
+                            android:textColor="@color/white"
+                            android:textSize="17dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_result_cpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upper_layout_top"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:text="@string/mbc_cool_down_complete"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/seprator"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@+id/layout_top"
+        android:layout_marginTop="4dp"
+        android:background="@color/sidebar_header_color" />
+
+</RelativeLayout>

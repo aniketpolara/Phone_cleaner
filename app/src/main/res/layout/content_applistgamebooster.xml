@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color">
+
+    <ListView
+        android:id="@+id/listcachedelte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
+        android:dividerHeight="0dp"
+        android:paddingVertical="10dp"
+        android:footerDividersEnabled="false"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/emptytv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/mbc_nogames_added"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_regular"
+        android:visibility="gone" />
+
+</RelativeLayout>

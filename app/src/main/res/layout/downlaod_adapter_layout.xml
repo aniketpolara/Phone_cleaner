@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="@dimen/activity_horizontal_marginsmall"
+    android:background="@color/sidebar_header_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/card_corner"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/img_fileicon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tvdownload_app_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="start"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="@string/mbc_app_cache"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvdownload_app_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="end"
+            android:paddingTop="3dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:text="1mb"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/check_down_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/check_download"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:button="@drawable/custom_checkbox"
+                android:checked="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:padding="7dp"
+                android:scaleX="0.5"
+                android:scaleY="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

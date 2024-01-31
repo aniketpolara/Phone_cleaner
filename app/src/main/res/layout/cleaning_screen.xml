@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/layout_scan_one" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ToolbarColoredBackArrow" android:id="@+id/toolbar" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:elevation="0dp" app:contentInsetStartWithNavigation="0dp" app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <TextView android:textSize="18dp" android:textColor="@color/text_color" android:layout_gravity="center_vertical" android:id="@+id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mbc_summary"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="40dp" android:textColor="@color/white" android:id="@+id/issues_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0"/>
+                <TextView android:textSize="14dp" android:textColor="@color/white" android:id="@+id/mediadisplay_sizetv_unit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="@string/mbc_threats"/>
+            </LinearLayout>
+            <TextView android:textSize="18dp" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/mbc_critical_issues"/>
+        </LinearLayout>
+        <ExpandableListView android:id="@+id/result_lv" android:background="@android:color/white" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="0dp" android:groupIndicator="@null" android:layout_weight="1" android:animateLayoutChanges="true"/>
+        <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textSize="20dp" android:textColor="@color/white" android:id="@+id/fix" android:background="@drawable/btn_orange_round" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="8dp" android:text="@string/mbc_fix_now"/>
+            <TextView android:textSize="10dp" android:textColor="@color/white" android:id="@+id/tv_ad" android:background="@color/grayseperator" android:paddingLeft="8dp" android:layout_width="match_parent" android:layout_height="5dp" android:layout_above="@+id/ad_view_banner_container"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ad_view_banner_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/margin_btm" android:layout_alignParentBottom="true"/>
+            <View android:id="@+id/margin_btm" android:layout_width="match_parent" android:layout_height="0dp" android:layout_alignParentBottom="true"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/layout_scan_two" android:background="@color/sidebar_header_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true">
+        <include layout="@layout/backpress_ads_screen"/>
+    </LinearLayout>
+</LinearLayout>

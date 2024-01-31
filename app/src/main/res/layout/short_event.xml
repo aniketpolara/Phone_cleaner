@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/sidebar_header_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_marginsmall" android:layout_marginBottom="@dimen/activity_horizontal_marginsmall">
+        <ImageView android:gravity="center" android:id="@+id/t_one" android:layout_width="0dp" android:layout_height="48dp" android:src="@mipmap/ic_launcher" android:layout_weight="0.18"/>
+        <TextView android:background="@color/txt_color" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <TextView android:textSize="11dp" android:textColor="@color/txt_color" android:ellipsize="end" android:gravity="center" android:id="@+id/t_two" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mbc_boostt" android:drawablePadding="3dp" android:layout_weight="0.18"/>
+        <TextView android:background="@color/txt_color" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="0.5dp" android:layout_height="match_parent"/>
+        <TextView android:textSize="11dp" android:textColor="@color/txt_color" android:ellipsize="end" android:gravity="center" android:id="@+id/t_six" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mbc_cpu_cooler" android:drawablePadding="3dp" android:layout_weight="0.18"/>
+        <TextView android:background="@color/txt_color" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="0.5dp" android:layout_height="match_parent"/>
+        <TextView android:textSize="11dp" android:textColor="@color/txt_color" android:ellipsize="end" android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mbc_boostt" android:drawablePadding="3dp" android:layout_weight="0.18"/>
+        <TextView android:background="@color/txt_color" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="0.5dp" android:layout_height="match_parent"/>
+        <TextView android:textSize="11dp" android:textColor="@color/txt_color" android:ellipsize="end" android:gravity="center" android:id="@+id/t_five" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mbc_anti_virus" android:drawablePadding="3dp" android:layout_weight="0.18"/>
+        <TextView android:background="@color/txt_color" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="0.5dp" android:layout_height="match_parent"/>
+        <TextView android:textSize="11dp" android:textColor="@color/txt_color" android:ellipsize="end" android:gravity="center" android:id="@+id/t_three" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mbc_boostt" android:drawablePadding="3dp" android:layout_weight="0.18"/>
+    </LinearLayout>
+</LinearLayout>

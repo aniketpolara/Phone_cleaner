@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sidebar_header_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_cpu_cooler_first"
+            tools:ignore="NotSibling">
+
+            <LinearLayout
+                android:id="@+id/cpucollerfirst_middellayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/divider_shadow"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_count_cpucoolerfirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="8"
+                    android:textColor="@color/Colororange"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textview_processservies2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="CPU heating process"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/listview_cpu_cooler_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cpucollerfirst_middellayout"
+                android:background="@color/sidebar_header_color"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="1dp"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/tv_cpucoller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_cpu_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="25dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:text="@string/mbc_textempty"
+                    android:textColor="@color/text_color"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_cpu_cooler_first"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/ad_view_banner_container"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/junk_rectangle">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lato_bold"
+                android:gravity="center"
+                android:text="@string/mbc_cool_down"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_ad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/ad_view_banner_container"
+            android:background="@color/grayseperator"
+            android:paddingLeft="8dp"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+        <LinearLayout
+            android:id="@+id/ad_view_banner_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/margin_btm"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical" />
+
+        <View
+            android:id="@+id/margin_btm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

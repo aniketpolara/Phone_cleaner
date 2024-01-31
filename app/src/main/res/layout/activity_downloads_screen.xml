@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appmanager_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/sidebar_header_color"
+        android:elevation="0dp"
+        android:theme="@style/ToolbarColoredBackArrow"
+        android:title=""
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/mbc_download"
+            android:textColor="@color/text_color"
+            android:textSize="18dp"
+            android:transitionName="title" />
+    </RelativeLayout>
+
+    <include layout="@layout/content_downloads_screen" />
+
+    <include layout="@layout/junk_bottom_sheet" />
+</RelativeLayout>

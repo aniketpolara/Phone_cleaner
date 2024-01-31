@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="?android:attr/actionBarSize">
+        <ImageButton android:id="@+id/boostitemicon" android:background="@null" android:padding="@dimen/activity_horizontal_marginbig" android:layout_width="?android:attr/actionBarSize" android:layout_height="?android:attr/actionBarSize" android:layout_marginLeft="@dimen/activity_horizontal_marginsmall" android:src="@mipmap/ic_launcher" android:scaleType="fitXY"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:textColor="@color/black" android:id="@+id/boostitemname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:text="@string/mbc_app_cache" android:maxLength="25"/>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:gravity="right" android:id="@+id/boostitemsize" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/activity_horizontal_marginsmall" android:text="" android:layout_weight="1"/>
+        <CheckBox android:id="@+id/boostitemcheck" android:padding="@dimen/activity_horizontal_marginsmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/activity_horizontal_marginsmall" android:checked="true" android:button="@drawable/custom_checkbox"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

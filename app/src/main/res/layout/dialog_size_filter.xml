@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/round_corner"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/bg_tab_selector"
+        app:tabIndicatorHeight="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/sidebar_header_color">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/level" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_gap" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mbc_gps" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <TextView
+        android:id="@+id/lay_matching_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/mbc_matchingleab"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d2d5e0"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tab_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Level"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/filter_tab_text_color"
+            android:textSize="14dp" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tab_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/time_gap"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/filter_tab_text_color"
+            android:textSize="14dp" />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tab_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/mbc_gps"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/filter_tab_text_color"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/lato_regular"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/scale" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:progressTint="@color/sidebar_header_color"
+        android:progress="10"
+        android:progressTintMode="src_over"
+        android:progressBackgroundTint="@color/corner_color"
+        android:progressBackgroundTintMode="src_over"
+        android:progressDrawable="@drawable/custom_seekbar2"
+        android:thumb="@drawable/custom_thumb2"
+        android:thumbTint="@color/sidebar_header_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/low"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/sidebar_header_color"
+            android:textSize="14dp" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/default_chkBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="@string/mbc_defaults"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/mbc_high"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/sidebar_header_color"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/cancel_corner"
+            android:text="Cancel"
+            android:textSize="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/squre_rectangle"
+            android:padding="8dp"
+            android:text="@string/mbc_ok"
+            android:textSize="16dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

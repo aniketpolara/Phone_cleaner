@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_ad"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="0dp"
+                android:theme="@style/ToolbarColoredBackArrow"
+                android:title=""
+                app:contentInsetStartWithNavigation="0dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/mbc_anti_virus"
+                    android:textColor="@color/text_color"
+                    android:textSize="18dp" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <include layout="@layout/content_scan" />
+
+            <include layout="@layout/junk_bottom_sheet" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_scan_two"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@color/sidebar_header_color"
+            android:visibility="gone">
+
+            <include layout="@layout/backpress_ads_screen" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_ad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/ad_view_banner_container"
+        android:background="@color/grayseperator"
+        android:paddingLeft="8dp"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ad_view_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/margin_btm"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical" />
+
+    <View
+        android:id="@+id/margin_btm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

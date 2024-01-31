@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="@string/mbc_real_protection"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_above="@+id/llBanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_heading"
+        android:paddingVertical="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/pbarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:translationZ="2dp"
+                android:visibility="invisible">
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/pbar"
+                    style="@style/SpinKitView.Large.WanderingCubes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:SpinKit_Color="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="NotSibling">
+
+                <RelativeLayout
+                    android:id="@+id/rl_texts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="center"
+                        android:text="It is a long established fact that a reader will be
+distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_detail"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="@string/enable_status_will_allow_it_to_feature_in_notification_tray"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey_text"
+                        android:textSize="18dp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/ll"
+                android:id="@+id/rl_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <RelativeLayout
+                    android:id="@+id/rl_enable_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <com.cleanPhone.mobileCleaner.utility.PanicAnimation
+                        android:id="@+id/btn_ripplescan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/enable_scan_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/squre_rectangle">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Enable &amp; Scan "
+                            android:textColor="@color/white"
+                            android:textSize="19dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_below="@id/rl_enable_layout"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/start_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_corner">
+
+                        <com.cleanPhone.mobileCleaner.utility.PanicAnimation
+                            android:id="@+id/btn_ripple"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="Enable"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/disable_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/card_corner">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="Not Now"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/llBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</RelativeLayout>

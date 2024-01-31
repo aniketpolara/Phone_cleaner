@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:keepScreenOn="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/circulerlayout"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_bg"
+                android:padding="8dp">
+
+                <com.cleanPhone.mobileCleaner.animate.CircleProgressView
+                    android:id="@+id/circleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                   />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/junkdisplay_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/mbc_progress_cleaning"
+                    android:textColor="@color/text_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.55"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/mbc_processing"
+                android:textColor="@color/text_color" />
+
+            <TextView
+                android:id="@+id/tv_filecount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/mbc_cleaning"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_ad"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@+id/ad_view_banner_container"
+        android:background="@color/grayseperator"
+        android:paddingLeft="8dp"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ad_view_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/margin_btm"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical" />
+
+    <View
+        android:id="@+id/margin_btm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sidebar_header_color"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/card_corner">
+
+            <ImageView
+                android:id="@+id/junklistitemimage"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/my_files" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/junklistitemapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:paddingStart="5dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:fontFamily="@font/lato_bold"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/junklistitemsize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:text="check"
+                    android:fontFamily="@font/lato_regular"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/listiteminfo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="3dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_info" />
+
+            <LinearLayout
+                android:id="@+id/checkcontainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/junklistitemcheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/custom_checkbox"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:scaleX="0.5"
+                    android:scaleY="0.5" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

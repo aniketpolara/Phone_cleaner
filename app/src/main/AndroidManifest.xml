@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cleanPhone.mobileCleaner">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name="com.cleanPhone.mobileCleaner.MobiClean"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.PhoneClean"
+        tools:targetApi="31">
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.ThankYouActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.StartActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.games.GamesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.ScanScreen"
+            android:screenOrientation="portrait" />
+
+
+        <service android:name="com.cleanPhone.mobileCleaner.tracking.CountryCode" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.cleanPhone.cache.phonemaster.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.ads.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.HomeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.JunkScanActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.JunkCleanScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.batmanager.BatterySaverActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.JunkDeleteAnimationScreen"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.gmebooster.GameAppListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.gmebooster.GameMessageBoost"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.coolers.CoolerCPUScreen"
+            android:label="@string/mbc_cpu_cooler"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.notifimanager.NotificationCleanerActivity"
+            android:exported="true"
+            android:label="Notification Cleaner"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.notifimanager.SettingOverlayScreen"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.tools.PrivateBrowserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.tools.DeviceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.tools.PrivateBrowser"
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.mobiclean.phoneclean.PrivateBrowser">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.CommonResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.similerphotos.DuplicacyMidSettings"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.similerphotos.ImageViewerScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.similerphotos.DuplicatesActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.utility.PopUpScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/FinestWebViewTheme.Light" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.tools.SpaceManagerActivity"
+            android:exported="true"
+            android:label="@string/mbc_large_files"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.tools.FilesGridActivity"
+            android:label="@string/mbc_large_files"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.utility.FilesListActivity"
+            android:label="@string/mbc_large_files"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.coolers.CoolerCPUAnimationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.RamBoostAppsScreen"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.tools.SocialCleanerListActivity"
+            android:label="@string/mbc_turbo_cleaner"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.DeleteCacheActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.socialmedia.GridActivity"
+            android:label="@string/mbc_turbo_cleaner"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.tools.SettingScreen"
+            android:label="@string/mbc_action_settings"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.SocialAnimationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.antimalware.AddAvIgnoreListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.notifimanager.NotificationIgnoreList"
+            android:label="@string/mbc_title_activity_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.batmanager.BatteryBoostAnim"
+            android:clearTaskOnLaunch="true"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.mobiclean.phoneclean.battery_module.BatteryBoostAnim"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.AnimatedBoostActivity"
+            android:exported="true"
+            android:label="@string/mbc_phone_boost_small"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".shortcutmodules.BrowserActivityShortcut"
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.mobiclean.phoneclean.BrowserActivityShortcut"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:priority="888">
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.gmebooster.GameBoostActivity"
+            android:exported="true"
+            android:taskAffinity=".gamebooster_moduel.GamebossterActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.antimalware.ResActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.antimalware.AntiVirusLast"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.antimalware.AVIgnorelist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".utility.ChargingScreen"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.antimalware.ScannigActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.cleanPhone.mobileCleaner.notifimanager.NLService"
+            android:exported="true"
+            android:label="@string/mbc_app_notification"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.cleanPhone.mobileCleaner.utility.LockOverlayService" />
+
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.NotificationSettings"
+            android:label="@string/mbc_title_activity_setting"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name="com.cleanPhone.mobileCleaner.alramsservices.NotificationService"
+            android:exported="true" />
+        <service android:name="com.cleanPhone.mobileCleaner.bservices.CoolAndBoostService" />
+
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.similerphotos.NoDuplicates"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.similerphotos.SmartSelection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.RealTimeActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.cleanPhone.mobileCleaner.bservices.AppForegroundService" />
+
+        <service android:name="com.cleanPhone.mobileCleaner.bservices.CheckStatusOfServices" />
+
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.socialmedia.SocialScanResultActivity"
+            android:label="@string/mbc_title_activity_social_scan_result"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.socialmedia.SocialMediaFilesTabScreen"
+            android:exported="true"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.app.ApplicationManagerActivity"
+            android:label="@string/mbc_title_activity_app_manager"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.similerphotos.DuplicateDivisionScreen"
+            android:label="@string/mbc_all_photos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.JunkCleaningScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.IgnoreListActivity"
+            android:label="@string/mbc_ignorefilter"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.DownloadsActivity"
+            android:label="@string/mbc_title_activity_downloads_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.cleanPhone.mobileCleaner.AllSettings"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.cleanPhone.mobileCleaner.ParentActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+
+    </application>
+
+</manifest>

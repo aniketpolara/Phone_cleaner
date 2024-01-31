@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cleanPhone.mobileCleaner.socialmedia.HeaderLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_layout_grid"
+    android:layout_width="match_parent"
+    android:layout_height="21dp">
+
+    <TextView
+        android:id="@+id/header_grid"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_margin="0dp"
+        android:singleLine="true"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textIsSelectable="false" />
+</com.cleanPhone.mobileCleaner.socialmedia.HeaderLayout>

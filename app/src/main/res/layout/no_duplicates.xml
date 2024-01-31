@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/sidebar_header_color"
+        android:theme="@style/ToolbarColoredBackArrow"
+        android:title=""
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="13dp"
+            android:src="@drawable/ic_back" />
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="18dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sidebar_header_color"
+        android:orientation="vertical"
+
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/img_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:includeFontPadding="false"
+                android:text="0"
+                android:textColor="@color/Colororange"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/junkdisplay_sizetv_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:includeFontPadding="false"
+                    android:text="Images"
+                    android:textColor="@color/Colororange"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_images_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/sidebar_header_color"
+            android:backgroundTint="@color/sidebar_header_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sidebar_header_color"
+                android:fontFamily="@font/lato_regular"
+                android:includeFontPadding="false"
+                android:padding="20dp"
+                android:text="@string/mbc_no_duplicate"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="@color/sidebar_header_color"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_horizontal_marginsmall"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_marginsmall"
+                    android:layout_marginBottom="@dimen/activity_horizontal_marginsmall"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="@string/mbc_matchingleab"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/sidebar_header_color"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btn_seekminus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:src="@drawable/minus" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/line5"
+                    android:gravity="center">
+
+                    <SeekBar
+                        android:id="@+id/settings_seekbar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_seekplus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:background="@null"
+                    android:src="@drawable/plus" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/lato_bold"
+                android:includeFontPadding="false"
+                android:text="@string/mbc_scantype"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/sidebar_header_color">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbtn_camera"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="@dimen/activity_horizontal_marginbig"
+                        android:checked="true"
+                        android:fontFamily="@font/lato_bold"
+                        android:paddingTop="@dimen/activity_horizontal_marginbig"
+                        android:paddingBottom="@dimen/activity_horizontal_marginbig"
+                        android:text="@string/mbc_camera"
+                        android:textColor="@color/white"
+                        app:buttonTint="@color/colorPrimaryDark" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="@color/sidebar_header_color" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbtn_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="@dimen/activity_horizontal_marginbig"
+                        android:buttonTint="@color/colorPrimaryDark"
+                        android:checked="false"
+                        android:fontFamily="@font/lato_bold"
+                        android:paddingTop="@dimen/activity_horizontal_marginbig"
+                        android:paddingBottom="@dimen/activity_horizontal_marginbig"
+                        android:text="@string/mbc_all_photos"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="@color/sidebar_header_color" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/rbtn_folder"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="@dimen/activity_horizontal_marginbig"
+                        android:checked="false"
+                        android:fontFamily="@font/lato_bold"
+                        android:paddingTop="@dimen/activity_horizontal_marginbig"
+                        android:paddingBottom="@dimen/activity_horizontal_marginbig"
+                        android:text="@string/mbc_select_folder"
+                        android:textColor="@color/white"
+                        app:buttonTint="@color/colorPrimaryDark" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/junk_rectangle"
+        android:onClick="scanClick"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/mbc_re_scan"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

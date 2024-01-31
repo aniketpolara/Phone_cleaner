@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_drawable_gamebooster"
+    android:orientation="horizontal"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/popupunistall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:padding="4dp"
+        android:text="@string/mbc_unistall"
+        android:fontFamily="@font/lato_regular"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/activity_horizontal_marginsmall"
+        android:fontFamily="@font/lato_regular"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp" />
+
+    <TextView
+        android:id="@+id/popupremove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:padding="@dimen/activity_horizontal_marginsmall"
+        android:text="@string/mbc_remove"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+</LinearLayout>

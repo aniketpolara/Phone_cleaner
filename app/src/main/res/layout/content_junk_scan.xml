@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:background="@color/sidebar_header_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/round_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:translationZ="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="14dp">
+
+                            <TextView
+                                android:id="@+id/tv_per"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="8dp"
+                                android:fontFamily="@font/lato_bold"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="19dp" />
+
+                            <TextView
+                                android:id="@+id/tv_sym"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/lato_bold"
+                                android:gravity="top"
+                                android:text=" %"
+                                android:textColor="@color/black"
+                                android:textSize="19dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/lato_bold"
+                            android:padding="5dp"
+                            android:text="Processing..."
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <com.cleanPhone.mobileCleaner.animate.CircleProgressView
+                        android:id="@+id/circleView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/junk_category_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="4dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/junk_count_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:text="@string/mbc_system_cache"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/junk_processing_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/real_time_homelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <LinearLayout
+                    android:id="@+id/card_lin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_system_cache"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_corner"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_app_cache"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_app_cache"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/txt_sys_cache"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_sys_cache"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="App Cache"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_temp_files"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_corner"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/iv_temp_file"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_temp_files"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/txt_temp_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_temp_file"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Temp Files"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/card_lin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/card_lin1"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_apk_file"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_corner"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_apk_file"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_apk_files"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/txt_apk_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_apk_file"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Apk Files"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                    </RelativeLayout>
+
+
+                    <Space
+                        android:layout_width="12dp"
+                        android:layout_height="match_parent" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_empty_folder"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_corner"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/iv_empty_folder"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_temp_files"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/txt_empty_folder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_empty_folder"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Empty Folder"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/card_lin3"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_below="@id/card_lin2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_memory_boost"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/blue_corner"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/iv_memory_boost"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_memory_boost"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/txt_memory_boost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/lato_bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="17dp"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_memory_boost"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Memory Boost"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+

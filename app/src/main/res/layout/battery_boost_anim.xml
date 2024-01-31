@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sidebar_header_color">
+
+    <com.cleanPhone.mobileCleaner.animate.GravView
+        android:id="@+id/grav_full"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_insta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_android" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_android" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_whtsapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_android" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_snap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/no" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_android"
+        android:visibility="invisible" />
+
+    <com.cleanPhone.mobileCleaner.waveview.WaveView
+        android:id="@+id/wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white" />
+
+    <com.cleanPhone.mobileCleaner.animate.GravView
+        android:id="@+id/grav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+      />
+
+    <com.cleanPhone.mobileCleaner.customview.RevealView
+        android:id="@+id/iv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/battery_booster_animation_n" />
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PhoneClean" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sidebar_header_color</item>
+        <item name="colorPrimaryVariant">@color/sidebar_header_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/corner_color</item>
+        <item name="colorSecondaryVariant">@color/sidebar_header_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/sidebar_header_color</item>
+        <item name="tabSelectedTextColor">#ff7043</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyle">@style/ButtonColor</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColor">#000000</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="tabSelectedTextColor">#ff7043</item>
+        <item name="colorButtonNormal">#000000</item>
+        <item name="colorControlNormal">#000000</item>
+        <item name="colorPrimary">@color/sidebar_header_color</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DefaultDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_down</item>
+    </style>
+    <style name="AppCompatAlertDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">#404040</item>
+        <item name="android:background">#ffffff</item>
+        <item name="colorAccent">#000000</item>
+    </style>
+    <style name="GravView"> </style>
+
+    <style name="RegularPointGenerator"></style>
+    <style name="SideToSideAnimator"></style>
+    <style name="RadarScanView"></style>
+    <style name="ShakeAnimator"></style>
+    <style name="BallGenerator"></style>
+    <style name="RippleBackground"></style>
+    <style name="FlowLayout_LayoutParams"></style>
+    <style name="FlowLayout"></style>
+    <style name="Gallery1"></style>
+
+    <style name="ArcProgress"></style>
+    <style name="DonutProgress"></style>
+    <style name="CircleProgress"></style>
+    <style name="FilePickerPreference"></style>
+    <style name="ShimmerView"></style>
+    <style name="SwipeButton"></style>
+    <style name="GifView"></style>
+    <style name="Widget_GifView"></style>
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+    <style name="ButtonColor" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="ToolbarColoredBackArrow" parent="@style/AppTheme">
+        <item name="colorControlNormal">@color/text_color</item>
+    </style>
+
+    <style name="tab_bg_ripple" parent="@style/Theme.AppCompat">
+        <item name="android:background">@drawable/tab_ripple_effect</item>
+    </style>
+    <style name="tooltip_bubble_text">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">left</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.25</item>
+    </style>
+    <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="TransparentTheme" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>
